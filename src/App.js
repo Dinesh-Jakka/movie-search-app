@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from './styles/GlobalStyles';
+import theme from './styles/theme';
+import SearchBar from './components/SearchBar';
+import MovieList from './components/MovieList';
 
-function App() {
+const App = () => {
+  const [query, setQuery] = useState('');
+
+  const handleSearch = (searchQuery) => {
+    setQuery(searchQuery);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <div className="App">
+        <h1>Movie Search</h1>
+        <SearchBar onSearch={handleSearch} />
+        <MovieList query={query} />
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

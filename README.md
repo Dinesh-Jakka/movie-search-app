@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Movie Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application that allows users to search for movies using the Open Library Search API. The results are displayed as cards, each with a random dog image fetched from the Dog API. The application features responsive design and dynamic styling with `styled-components`.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Search Bar**: Allows users to enter a movie name and search for relevant results.
+- **Movie Cards**: Displays movie details in a card format with a random dog image.
+- **Responsive Design**: Adjusts layout and styling based on screen size.
+- **Styled Components**: Uses `styled-components` for modern and modular styling.
 
-### `npm start`
+## Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### SearchBar
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Purpose**: Allows users to enter a movie name and trigger the search.
+- **Features**:
+  - Input field for movie name.
+  - Submit button to initiate the search.
+  - Styled with modern and responsive design.
 
-### `npm test`
+### MovieList
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Purpose**: Displays a list of movie cards based on the search results.
+- **Features**:
+  - Fetches and displays movie data.
+  - Handles loading and error states.
+  - Conditionally shows a message when no movies are found after a search.
 
-### `npm run build`
+### MovieCard
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Purpose**: Renders individual movie details along with a random dog image.
+- **Features**:
+  - Displays movie title, author(s), and first publication year.
+  - Shows a random dog image fetched from the Dog API.
+  - Includes hover effects and responsive design.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API Endpoints
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Open Library Search API**: 
+  - **Endpoint**: `https://openlibrary.org/search.json?q={query}`
+  - **Description**: Used to search for movies by appending the movie name to the query parameter.
 
-### `npm run eject`
+- **Dog API**: 
+  - **Endpoint**: `https://dog.ceo/api/breeds/image/random`
+  - **Description**: Provides a random dog image to be displayed in movie cards.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **React**: JavaScript library for building user interfaces.
+- **styled-components**: Library for styling React components.
+- **Axios**: Promise-based HTTP client for making API requests.
+- **Open Library Search API**: API for fetching movie data.
+- **Dog API**: API for fetching random dog images.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation
 
-## Learn More
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/movie-search-app.git
+2. **Navigate into the project directory**:
+   ```bash
+   cd movie-search-app
+3. **Install dependencies**:
+    ```bash
+    npm install
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Start the development server**:
+    ```bash
+    npm start
+2. **Open your browser and go to http://localhost:3000 to view the application** .
