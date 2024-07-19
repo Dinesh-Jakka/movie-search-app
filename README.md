@@ -2,6 +2,8 @@
 
 A React application that allows users to search for movies using the Open Library Search API. The results are displayed as cards, each with a random dog image fetched from the Dog API. The application features responsive design and dynamic styling with `styled-components`.
 
+## Live Link : https://movie-search-app-hodo.onrender.com
+
 ## Features
 
 - **Search Bar**: Allows users to enter a movie name and search for relevant results.
